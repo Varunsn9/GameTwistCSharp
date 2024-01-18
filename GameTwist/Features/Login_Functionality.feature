@@ -25,7 +25,8 @@ Scenario: Users cannot log in with invalid credentials
     When the user opens the application
     Then the user is automatically logged in without entering credentials
     And is redirected to the home page
-
+    
+    @NotAutomatable
   Scenario: Users can reset their password using the "Forgot Password" feature
 
     Given the user is on the login page <"https://www.gametwist.com/en/">

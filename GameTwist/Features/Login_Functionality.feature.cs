@@ -184,12 +184,14 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Users can reset their password using the \"Forgot Password\" feature")]
+        [NUnit.Framework.CategoryAttribute("NotAutomatable")]
         public void UsersCanResetTheirPasswordUsingTheForgotPasswordFeature()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "NotAutomatable"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Users can reset their password using the \"Forgot Password\" feature", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 29
+#line 30
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -199,41 +201,41 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 31
+#line 32
     testRunner.Given("the user is on the login page <\"https://www.gametwist.com/en/\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 32
+#line 33
     testRunner.When("the user clicks on the \"Forgot Password\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 33
+#line 34
     testRunner.And("provides a valid email address <\"feydicirzo@gufum.com\"> and nickname <\"feydicirzo" +
                         "\"> for password recovery", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 34
+#line 35
     testRunner.And("submits the password recovery form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 35
+#line 36
     testRunner.And("the user receives a success message<\"If there is an account matching your email a" +
                         "ddress on our website, you will receive an email with a link to reset your passw" +
                         "ord.\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 36
+#line 37
     testRunner.Then("the user receives a password reset email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 38
+#line 39
     testRunner.When("the user clicks on the change password link in the email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 39
+#line 40
     testRunner.And("provides a Nickname <\"feydicirzo\"> and new password <\"1234asd!@#\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 40
+#line 41
     testRunner.And("clicks on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 41
+#line 42
     testRunner.Then("the user receives a success message <\"Your password has been successfully updated" +
                         ". You can log in now.\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 42
+#line 43
     testRunner.And("can log in with the new password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

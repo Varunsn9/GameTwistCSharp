@@ -76,10 +76,12 @@ namespace GameTwist.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Users can successfully register for an account with valid information")]
         [NUnit.Framework.CategoryAttribute("UserRegistration")]
+        [NUnit.Framework.CategoryAttribute("NotAutomatable")]
         public void UsersCanSuccessfullyRegisterForAnAccountWithValidInformation()
         {
             string[] tagsOfScenario = new string[] {
-                    "UserRegistration"};
+                    "UserRegistration",
+                    "NotAutomatable"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Users can successfully register for an account with valid information", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
@@ -128,12 +130,14 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Users must verify their email to activate the account")]
+        [NUnit.Framework.CategoryAttribute("NotAutomatable")]
         public void UsersMustVerifyTheirEmailToActivateTheAccount()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "NotAutomatable"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Users must verify their email to activate the account", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 20
+#line 21
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -143,19 +147,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 22
+#line 23
     testRunner.Given("the user has registered with valid information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 23
+#line 24
     testRunner.And("the user gets the verification link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 24
+#line 25
     testRunner.When("the user clicks on the verification link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 25
+#line 26
     testRunner.Then("the user account is successfully activated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 26
+#line 27
     testRunner.And("the user can log in with Nickname<\"\"> and password <\"\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -171,7 +175,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "NotAutomatable"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Users must adhere to password strength requirements", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 29
+#line 30
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -181,31 +185,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 31
+#line 32
     testRunner.Given("the user is on the registration page <\"https://www.gametwist.com/en/registration/" +
                         "\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 32
+#line 33
     testRunner.When("the user provides a weak password <\"1213abc\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 33
+#line 34
     testRunner.Then("the system displays an error message about password strength <\"Your password must" +
                         " be at least 10 characters long.\"> <\"Your password must contain at least one let" +
                         "ter, one number or a special character.\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 34
+#line 35
     testRunner.And("the user cannot proceed with registration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 36
+#line 37
     testRunner.When("the user provides a strong password<\"1234abc!@#\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 37
+#line 38
     testRunner.And("submits the registration form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 38
+#line 39
     testRunner.Then("the user receives a verification email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 39
+#line 40
     testRunner.And("can successfully activate the account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -221,7 +225,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "Automatable"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Users cannot register with an already registered email", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 42
+#line 43
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -231,18 +235,18 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 44
+#line 45
     testRunner.Given("there is an existing user with a specific email address <\"feydicirzo@gufum.com\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 45
+#line 46
     testRunner.When("the user attempts to register with the same email address <\"feydicirzo@gufum.com\"" +
                         ">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 46
+#line 47
     testRunner.Then("the system displays an <\"The e-mail address you entered is already in use.\"> erro" +
                         "r message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 47
+#line 48
     testRunner.And("the user cannot proceed with registration using the duplicate email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -258,7 +262,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "Automatable"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Users cannot register with invalid information", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 50
+#line 51
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -268,59 +272,59 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 52
+#line 53
     testRunner.Given("the user is on the registration page <\"https://www.gametwist.com/en/registration/" +
                         "\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 53
+#line 54
     testRunner.When("the user provides invalid registration Email <\"emailWIthouthAttherate\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 54
+#line 55
     testRunner.Then("the system displays <\"Please enter a valid e-mail address.\"> error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 56
+#line 57
     testRunner.When("the user provides invalid registration NickName <aa>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 57
+#line 58
     testRunner.Then("the system displays <\"Your nickname must be between 3 and 13 characters long.\"> e" +
                         "rror message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 59
+#line 60
     testRunner.When("the user provides invalid registration Password <\"123asd!@#\">", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 60
+#line 61
     testRunner.Then("the system displays <\"Your password must be at least 10 characters long.\"> <\"Your" +
                         " password must contain at least one letter, one number or a special character.\">" +
                         " error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 62
+#line 63
      testRunner.When("the user regstartion without agreeing terms and conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 63
+#line 64
     testRunner.Then("the system displays <\"You must agree to our General Terms & Conditions to continu" +
                         "e.\"> error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 65
+#line 66
     testRunner.When("the user not providing date of birth", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 66
+#line 67
     testRunner.And("submits the registration form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 67
+#line 68
     testRunner.Then("the system displays <\"Please select day\"> <\"Please select month\"> <\"Please select" +
                         " year\"> error messages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 69
+#line 70
     testRunner.When("the user not Checking of captcha", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 70
+#line 71
     testRunner.And("submits the registration form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 71
+#line 72
     testRunner.Then("the system displays <\"The security check is a required field. Please enter the co" +
                         "de.\"> error messages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 72
+#line 73
     testRunner.And("the user cannot proceed with registration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

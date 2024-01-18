@@ -2,7 +2,7 @@
 
 Validation of User Registration
 
-@UserRegistration
+@UserRegistration @NotAutomatable
 Scenario: Users can successfully register for an account with valid information
 	Given User navigating registration page <"https://www.gametwist.com/en/registration/">
 	When  the user provides valid registration information
@@ -16,7 +16,8 @@ Scenario: Users can successfully register for an account with valid information
      When the user logs in with the registered credentials
     Then the user is redirected to the home page
     And receives a welcome message or notification
-
+    
+@NotAutomatable
  Scenario: Users must verify their email to activate the account
 
     Given the user has registered with valid information
